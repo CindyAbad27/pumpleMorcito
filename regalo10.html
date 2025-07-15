@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juego de Memoria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/memoria.css" />
+</head>
+<body class="fondo-portada">
+  <h1 class="titulo text-center mb-4">Juego de Memoria 💖</h1>
+  
+  <div class="memory-container" id="memory-container"></div>
+
+  <div class="text-center mt-4">
+    <button id="restart-btn" class="btn-verificar">Reiniciar Juego</button>
+    <a href="regalos.html" class="btn-regresar">Volver a los regalos</a>
+  </div>
+
+  <audio id="sound-correct" src="sounds/correct.mp3" preload="auto"></audio>
+  <audio id="sound-wrong" src="sounds/wrong.mp3" preload="auto"></audio>
+
+  <script src="js/memoria.js"></script>
+</body>
+</html>

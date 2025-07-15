@@ -1,0 +1,119 @@
+.container-sopa {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: nowrap; /* No permite que baje la lista */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  min-width: 450px; /* Para que haya espacio suficiente */
+}
+
+.sopa-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 40px);
+  grid-auto-rows: 40px;
+  gap: 3px;
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(255, 78, 114, 0.3);
+}
+
+.celda {
+  border: 1px solid #ffacc2;
+  background-color: #fff0f6;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #d9003f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.celda.seleccionada {
+  background-color: #ff4e72;
+  color: white;
+}
+
+.palabras-lista {
+  max-width: 250px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #d9003f;
+  user-select: none;
+}
+
+.palabras-lista h3 {
+  margin-bottom: 0.8rem;
+}
+
+.palabras-lista ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.palabras-lista li {
+  margin-bottom: 0.6rem;
+  padding-left: 0.3rem;
+  border-left: 3px solid #ff4e72;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.palabras-lista li.encontrada {
+  color: #4caf50;
+  text-decoration: line-through;
+  border-left-color: #4caf50;
+}
+
+/* Botones */
+
+.btn-verificar, .btn-regresar {
+  background: var(--degradado);
+  border: none;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+  margin: 0 0.5rem;
+}
+
+.btn-verificar:hover, .btn-regresar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(100deg, #ff2e59 20%, #d9003f 80%);
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive: en pantallas pequeñas, acomodar vertical */
+@media (max-width: 700px) {
+  .container-sopa {
+    flex-wrap: wrap; /* Permite bajar la lista */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .palabras-lista {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+}
+.botones-sopa {
+  margin-top: 2rem; /* espacio arriba del botón */
+  text-align: center;
+}
+.celda.resaltada {
+  background-color: #ff4e72;
+  color: white;
+}

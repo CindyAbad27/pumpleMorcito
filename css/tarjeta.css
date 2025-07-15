@@ -1,0 +1,177 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(255, 78, 114, 0.3);
+  text-align: center;
+  max-width: 320px;
+  animation: pulse 3s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+  /* Añade estas líneas: */
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Permite que el contenido se expanda correctamente */
+}
+
+.card-body {
+  flex: 1; /* La imagen ocupa todo el espacio disponible */
+}
+
+.card-footer {
+  margin-top: auto; /* Empuja el botón hacia abajo */
+  padding-top: 2rem; /* Espacio entre la imagen y el botón */
+  text-align: center;
+}
+
+button {
+  background: linear-gradient(100deg, #ff96a5 20%, #ff4e72 80%);
+  border: none;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  outline: none;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(100deg, #ff2e59 20%, #d9003f 80%);
+}
+
+.hidden {
+  display: none;
+  font-weight: bold;
+  color: #d9003f;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* Animación pulso para la tarjeta */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 8px 20px rgba(255, 78, 114, 0.3);
+  }
+  50% {
+    box-shadow: 0 12px 30px rgba(255, 78, 114, 0.5);
+  }
+}
+/* Contenedor para confeti y globos */
+.confetti-container, .balloon-container {
+  position: fixed;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  top: 0; left: 0;
+  overflow: visible;
+  z-index: 9999;
+}
+
+/* Confeti */
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--confetti-color);
+  opacity: 0.9;
+  transform-origin: center;
+  animation: confetti-fall linear forwards;
+  border-radius: 8px;
+}
+
+/* Animación caída del confeti */
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Globos */
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 20% 30%, #f44336, #b71c1c);
+  border-radius: 50%;
+  animation: balloon-rise linear forwards;
+  box-shadow: inset -6px -6px 15px rgba(255, 255, 255, 0.6);
+  border-radius: 55% 55% 55% 55% / 50% 50% 65% 65%;
+}
+
+/* Forma de la cuerda */
+.balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  width: 2px;
+  height: 25px;
+  background: #b71c1c;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.balloon::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  filter: blur(3px);
+}
+
+/* Animación subida del globo */
+@keyframes balloon-rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.1);
+    opacity: 0;
+  }
+}
+.btn-regresar {
+  background: var(--degradado);
+  border: none;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+}
+
+.btn-regresar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(100deg, #ff2e59 20%, #d9003f 80%);
+  color: white;
+  text-decoration: none;
+}
+.btn-container {
+  margin-top: auto;
+}

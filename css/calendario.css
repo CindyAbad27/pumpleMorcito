@@ -1,0 +1,97 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe4ec, #ffd6e8, #fff0f6);
+  margin: 0;
+}
+
+.calendarios-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.calendario {
+  max-width: 350px;
+  font-family: 'Poppins', sans-serif;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(255, 78, 114, 0.3);
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+.calendario th {
+  background: var(--degradado);
+  color: white;
+  padding: 0.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.calendario td {
+  border: 1px solid #f5c1ca;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.calendario td:hover {
+  background-color: #ffd6e8;
+}
+
+.calendario td.destacado {
+  background-color: #ff4e72;
+  color: white;
+  font-weight: 700;
+  border-color: #d9003f;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  max-width: 180px;
+  background-color: #ff4e72;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 10;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.9rem;
+  white-space: normal;
+}
+
+.calendario td:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn-regresar {
+  margin-top: 2rem;
+  background: var(--degradado);
+  border: none;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-regresar:hover {
+  background: linear-gradient(100deg, #ff2e59 20%, #d9003f 80%);
+  transform: scale(1.05);
+  text-decoration: none;
+  color: white;
+}

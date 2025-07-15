@@ -1,0 +1,50 @@
+body {
+  background: linear-gradient(135deg, #ffe4ec, #ffd6e8, #fff0f6);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.carta {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  box-shadow: 0 0.5rem 1.5rem rgba(255, 78, 114, 0.3);
+}
+
+.carta-imagen {
+  width: 100%;
+  max-width: 700px; 
+  height: auto;
+  margin: 0 auto; 
+  display: block;
+  border-radius: 0.8rem;
+}
+
+.btn-regresar {
+  margin-top: 2rem;
+  background: linear-gradient(100deg, #ff96a5 20%, #ff4e72 80%);
+  border: none;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-regresar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(100deg, #ff2e59 20%, #d9003f 80%);
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}

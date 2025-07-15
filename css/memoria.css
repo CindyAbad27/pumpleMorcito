@@ -1,0 +1,112 @@
+/* memoria.css */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe4ec, #ffd6e8, #fff0f6);
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.titulo {
+  color: #d9003f;
+  margin-bottom: 2rem;
+}
+
+.memory-container {
+  display: grid;
+  grid-template-columns: repeat(4, 130px);
+  grid-gap: 20px;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  width: 130px;
+  height: 130px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 78, 114, 0.4);
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  user-select: none;
+}
+
+.card-front {
+  background-color: #ffacc2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: white;
+  box-shadow: inset 0 0 10px #ff4e72;
+}
+
+.card-back {
+  background: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.card-back img {
+  max-width: 90px;
+  max-height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.btn-verificar, .btn-regresar {
+  background: linear-gradient(100deg, #ff96a5 20%, #ff4e72 80%);
+  border: none;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;       /* mínimo ancho para evitar que el botón pequeño sea muy pequeño */
+  white-space: nowrap;    /* evita salto de línea */
+  box-sizing: border-box;
+}
+
+
+.btn-verificar:hover, .btn-regresar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(100deg, #ff2e59 20%, #d9003f 80%);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-verificar, .btn-regresar {
+  width: 210px; /* o el ancho que se necesite */
+  /* resto igual */
+}

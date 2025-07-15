@@ -1,0 +1,67 @@
+.trivia-container {
+  max-width: 480px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.opcion {
+  display: block;
+  margin: 0.8rem 0;
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--rosafuerte);
+  border-radius: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.opcion:hover {
+  background-color: var(--rosafuerte);
+  color: white;
+}
+
+.opcion.selected {
+  background-color: var(--rosafuerte);
+  color: white;
+}
+
+.btn-descubrir {
+  background: var(--degradado);
+  border: none;
+  color: white;
+  padding: 0.8rem 3rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.btn-descubrir:hover {
+  transform: scale(1.03);
+}
+
+#resultado {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--rosafuerte);
+}
+.btn-regresar {
+  background: var(--degradado);
+  border: none;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+}
+
+.btn-regresar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(100deg, #ff2e59 20%, #d9003f 80%);
+  color: white;
+  text-decoration: none;
+}

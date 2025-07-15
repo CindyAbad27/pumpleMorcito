@@ -1,0 +1,73 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe4ec, #ffd6e8, #fff0f6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 0;
+}
+
+#puzzle {
+  width: 360px;  /* 3 piezas * 120px cada una */
+  height: 360px;
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 2px;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(255, 78, 114, 0.3);
+  background: white;
+  user-select: none;
+  margin-bottom: 2rem;
+}
+
+.piece {
+  width: 120px;
+  height: 120px;
+  background-image: url('../img/puzzle.webp'); /* Ajusta la ruta según tu estructura */
+  background-size: 360px 360px;
+  border-radius: 0.5rem;
+  cursor: grab;
+  box-shadow: 0 0 5px rgba(217, 0, 63, 0.6);
+  transition: transform 0.2s ease;
+  
+}
+
+.piece.dragging {
+  opacity: 0.6;
+  cursor: grabbing;
+  z-index: 10;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(217,0,63,0.9);
+}
+
+.btn-verificar, .btn-regresar {
+  background: linear-gradient(100deg, #ff96a5 20%, #ff4e72 80%);
+  border: none;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;       /* mínimo ancho para evitar que el botón pequeño sea muy pequeño */
+  white-space: nowrap;    /* evita salto de línea */
+  box-sizing: border-box;
+}
+.btn-verificar:hover, .btn-regresar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(100deg, #ff2e59 20%, #d9003f 80%);
+  color: white;
+  text-decoration: none;
+}
+.btn-verificar, .btn-regresar {
+  width: 210px; /* o el ancho que se necesite */
+  /* resto igual */
+}
+

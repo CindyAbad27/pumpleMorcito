@@ -1,0 +1,66 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe4ec, #ffd6e8, #fff0f6);
+  color: #d9003f;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin: 0;
+}
+
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.time-segment {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 15px rgba(255, 78, 114, 0.4);
+  min-width: 90px;
+}
+
+.time-segment span {
+  display: block;
+}
+
+#days, #hours, #minutes, #seconds {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.label {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #ff4e72;
+}
+
+#message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff2e59;
+}
+.btn-regresar {
+  background: var(--degradado);
+  border: none;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+}
+
+.btn-regresar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(100deg, #ff2e59 20%, #d9003f 80%);
+  color: white;
+  text-decoration: none;
+}

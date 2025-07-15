@@ -1,0 +1,61 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe4ec, #ffd6e8, #fff0f6);
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem 1rem;
+  color: #d63384;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portada {
+  max-width: 350px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(255, 78, 114, 0.4);
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.spotify-embed {
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(255, 78, 114, 0.3);
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.btn-regresar {
+  background: var(--degradado);
+  border: none;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+}
+
+.btn-regresar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(100deg, #ff2e59 20%, #d9003f 80%);
+  color: white;
+  text-decoration: none;
+}
